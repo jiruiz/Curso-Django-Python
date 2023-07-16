@@ -1,0 +1,10 @@
+{% extends 'miapp/base.html' %}
+{% load static %}
+{% block title %}
+    Un Curso
+{% endblock title%}
+
+{% block content %}
+    <h1> Informacion del Curso {{cursos.0}} - {{cursos.1}} </h1>
+    <h2> Cantidad de Inscriptos {{cursos.2|add:"111"}}</h2>
+{% endblock content %}

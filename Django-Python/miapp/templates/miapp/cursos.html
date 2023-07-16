@@ -1,0 +1,36 @@
+{% load static %}
+
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" TYPE="text/css" href=" {% static 'miapp/estilos.css' %}">
+    <title>Listado de Cursos (DTL)</title>
+</head>
+<body>
+    <img  src="{% static 'miapp/Django-logo.png' %}" alt="Django"  width="50px" height="50px"    >
+    <table class="tabla-cursos">
+        <thead>
+            <tr>
+                <th style="width: 100px;"> ID </th>
+                <th style="width: 100px;"> NOMBRE </th>
+                <th style="width: 100px;"> INSCRIPTOS </th>
+            </tr>
+        </thead>
+        <tbody>
+        {% for id, nombre, inscriptos in cursos%}
+        <tr>
+            
+
+            <td>{{id}}</td>
+            <td>{{nombre}}</td>
+            <td>{{inscriptos}}</td>
+            
+        </tr>
+        {% endfor %}
+    </tbody>
+    </table>
+</body>
+</html>

@@ -1,0 +1,15 @@
+{% extends 'miapp/base.html' %}
+{% load static %}
+{% block title %}
+    Nuevo Curso 
+{% endblock title %}    
+{% block content %}
+<form method="POST">
+    {% csrf_token %}
+    <table>
+        {{ form.as_table }}    
+    </table>
+
+    <input type="submit" value="Crear Curso">
+</form>
+{% endblock content %}
